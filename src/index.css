@@ -5,3 +5,23 @@
 *{
   font-family: Outfit;
 }
+
+.course-details-heading-small {
+  @apply text-[26px] leading-[36px];
+}
+
+.course-details-heading-large {
+  @apply text-[36px] leading-[44px];
+}
+
+.home-heading-small {
+  @apply text-[28px] leading-[34px];
+}
+
+.home-heading-large {
+  @apply text-[48px] leading-[56px];
+}
+
+.text-default {
+  @apply text-[15px] leading-[21px];
+}
