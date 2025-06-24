@@ -3,6 +3,9 @@ import { AppContext } from '../../context/AppContext'
 import { useParams } from 'react-router-dom';
 import { assets } from '../../assets/assets';
 import humanizeDuration from 'humanize-duration';
+import YouTube from 'react-youtube';
+import Footer from '../../components/student/Footer';
+import Rating from '../../components/student/Rating';
 
 const Player = () => {
 
@@ -74,12 +77,31 @@ const Player = () => {
             </div>
           ))}
         </div>
+
+        <div className='flex items-center gap-3 py-3 mt-10'>
+          <h1 className='text-xl font-bold'>Rate this course :</h1>
+          <Rating initialRating={0} />
+        </div>
+
       </div>
       {/* right col  */}
       <div>
-        
+        {
+          playerData ? (
+            <div className='md:mt-10'>
+              <YouTube videoId={playerData.lectureUrl.split('/').pop()} iframeClassName='w-full aspect-video' />
+              <div className='flex justify-between items-center mt-1'>
+                <p>{playerData.chapter}.{playerData.lecture} {playerData.lectureTitle}</p>
+                <button className='text-blue-600'>{false ? 'Completed' : 'Mark Complete'}</button>
+              </div>
+            </div>
+          )
+          :
+          <img src={courseData ? courseData.courseThumbnail : ''} alt=''/>
+        }
       </div>
     </div>
+    <Footer />
     </> 
   )
 }
