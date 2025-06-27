@@ -1,3 +1,4 @@
+
 import Course from "../models/Course.js";
 
 
@@ -34,3 +35,5 @@ export const getCourseId = async(req,res)=>{
         res.json({success: false, message: error.message});
     }
 }
+
+
