@@ -2,6 +2,7 @@ import {clerkClient} from '@clerk/express';
 import Course from '../models/Course.js';
 import {v2 as cloudinary} from 'cloudinary';
 import { Purchase } from '../models/Purchase.js';
+import User from '../models/Users.js'
 
 //update role to educator
 export const updateRoleToEducator = async(req,res) =>{
@@ -80,7 +81,7 @@ export const educatorDashboardData = async(req,res) =>{
                 _id: {$in: course.enrolledStudents}
             },'name imageUrl')
 
-            students.forEach(element => {
+            students.forEach(student => {
                 enrolledStudentsData.push({
                     courseTitle: course.courseTitle,
                     student
