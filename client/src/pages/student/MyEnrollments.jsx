@@ -21,7 +21,8 @@ const MyEnrollments = () => {
           const {data} = await axios.post(`${backendUrl}/api/user/get-course-progress`,{courseId : course._id},
             {headers : {Authorization : `Bearer ${token}`}})
             let totalLectures = calculateNoOfLectures(course);
-            const lecturesCompleted = data.progressData? data.progressData.lecturesCompleted.length : 0;
+            const lecturesCompleted = data.progressData && Array.isArray(data.progressData.lecturesCompleted)
+              ? data.progressData.lecturesCompleted.length: 0;
             return {totalLectures,lecturesCompleted};
         })
       )
