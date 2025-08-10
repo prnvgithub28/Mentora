@@ -59,6 +59,7 @@ const Player = () => {
       if(data.success){
         toast.success(data.message);
         getCourseProgress();
+        await fetchUserEnrolledCourses();
       } else {
         toast.error(data.message);
       }
