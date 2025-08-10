@@ -17,7 +17,7 @@ Mentora is a comprehensive Learning Management System (LMS) that provides separa
 - **Course Creation**: Create and structure courses with multiple chapters and lectures
 - **Content Management**: Upload and organize educational content
 - **Analytics Dashboard**: Monitor student engagement and course performance
-- **Student Management**: Track enrollments and progress [1](#0-0) [2](#0-1) [3](#0-2) [4](#0-3) 
+- **Student Management**: Track enrollments and progress 
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Mentora is a comprehensive Learning Management System (LMS) that provides separa
 ### Third-Party Services
 - **Clerk** - Authentication and user management
 - **Stripe** - Payment processing for course enrollments
-- **Cloudinary** - Media storage and delivery [5](#0-4) [6](#0-5) [7](#0-6) [8](#0-7) 
+- **Cloudinary** - Media storage and delivery 
 
 ## Project Structure
 
